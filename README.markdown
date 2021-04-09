@@ -1,7 +1,6 @@
 A [Giter8][g8] template for ...!
 
-Template license
-----------------
+# Template license
 Written in 2021 by Alexander Kogan alexander.kogan@spaceteams.de
 
 To the extent possible under law, the author(s) have dedicated all copyright and related
@@ -10,6 +9,10 @@ This template is distributed without any warranty. See <http://creativecommons.o
 
 [g8]: http://www.foundweekends.org/giter8/
 
-TODO
-----
+# Development
+To test the template with the [default properties](./src/main/g8/default.properties) run: `sbt g8`
+
+The files will be created in `./target/g8`.
+
+# TODO
 * Does creating into existing folders work? (e.g. modules)
