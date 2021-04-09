@@ -10,10 +10,11 @@ This template is distributed without any warranty. See <http://creativecommons.o
 [g8]: http://www.foundweekends.org/giter8/
 
 # Properties
-| Name                      | Description |
-|---------------------------|-------------|
-|**addBoilerplate & region**| If addBoilerplate is true, a main.tf will be created with the region.|
-|**registrationToken**     | Needed to register the GitLab runner to a repository. You can get it in a GitLab repository from *Settings -> CI/CD -> Runners -> Set up a specific runner manually*. It is added by a .tfvars file, so that you can encrypt it with git-crypt for example.|
+| Name                        | Description |
+|-----------------------------|-------------|
+|**addBoilerplate & region**  | If addBoilerplate is true, a main.tf will be created with the region.|
+|**registrationToken**        | Needed to register the GitLab runner to a repository. You can get it in a GitLab repository from *Settings -> CI/CD -> Runners -> Set up a specific runner manually*. It is added by a .tfvars file, so that you can encrypt it for pushing it to a repository with git-crypt for example.|
+|**vpcId & internetGatewayId**| VPC and internet gateway, that the runner should use. To enter Terraform outputs, you can use for example `$"$"${data.vpc_id}` to set the local as `"${data.vpc_id}"` or you can replace them afterwards.|
 
 # Development
 To test the template with the [default properties](./src/main/g8/default.properties) run: `sbt g8`
