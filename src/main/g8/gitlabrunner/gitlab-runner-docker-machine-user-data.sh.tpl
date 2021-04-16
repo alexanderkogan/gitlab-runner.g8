@@ -12,7 +12,7 @@ tee /opt/aws_auth_cronjob.sh <<EOL
 #!/bin/bash
 set -euo pipefail
 echo "AWS ECR Login"
-aws ecr get-login-password --region $region$ | docker login -u AWS --password-stdin "${ecr_url}"
+aws ecr get-login-password --region $region$ | docker login -u AWS --password-stdin "$"$"${ecr_url}"
 EOL
 chmod +x /opt/aws_auth_cronjob.sh
 /opt/aws_auth_cronjob.sh

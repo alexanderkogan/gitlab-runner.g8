@@ -172,10 +172,10 @@ resource "aws_key_pair" "gitlabrunner_public" {
 }
 
 data "local_file" "gitlabrunner-private-ssh-key" {
-  filename = "${path.module}/gitlabrunner/gitlab-runner-id_rsa"
+  filename = "$"$"${path.module}/gitlabrunner/gitlab-runner-id_rsa"
 }
 data "local_file" "gitlabrunner-public-ssh-key" {
-  filename = "${path.module}/gitlabrunner/gitlab-runner-id_rsa.pub"
+  filename = "$"$"${path.module}/gitlabrunner/gitlab-runner-id_rsa.pub"
 }
 
 locals {
@@ -246,6 +246,6 @@ resource "aws_instance" "gitlab_runner_instance" {
 
 module "gitlabrunner_build_cache" {
   source          = "modules/aws_s3_bucket"
-  name            = "${local.bucket_prefix}gitlabrunner-cache"
+  name            = "$"$"${local.bucket_prefix}gitlabrunner-cache"
   owner_tag       = "Owner"
 }

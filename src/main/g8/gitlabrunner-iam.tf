@@ -37,8 +37,8 @@ data "aws_iam_policy_document" "gitlab_runner_tools" {
   statement {
     actions = ["sts:GetServiceBearerToken"]
     resources = [
-      "arn:aws:sts::${data.aws_caller_identity.current.account_id}:assumed-role/${aws_iam_role.gitlab_runner.name}/*",
-      "arn:aws:sts::${data.aws_caller_identity.current.account_id}:assumed-role/${aws_iam_role.docker_machine.name}/*",
+      "arn:aws:sts::$"$"${data.aws_caller_identity.current.account_id}:assumed-role/$"$"${aws_iam_role.gitlab_runner.name}/*",
+      "arn:aws:sts::$"$"${data.aws_caller_identity.current.account_id}:assumed-role/$"$"${aws_iam_role.docker_machine.name}/*",
     ]
   }
   statement {
@@ -95,7 +95,7 @@ data "aws_iam_policy_document" "gitlab_runner_tools" {
     actions = [
       "cloudfront:CreateInvalidation"
     ]
-    resources = ["arn:aws:cloudfront::${data.aws_caller_identity.current.account_id}:distribution/*"]
+    resources = ["arn:aws:cloudfront::$"$"${data.aws_caller_identity.current.account_id}:distribution/*"]
   }
 }
 resource "aws_iam_policy" "gitlab_runner_tools" {
@@ -158,8 +158,8 @@ data "aws_iam_policy_document" "service_linked_role" {
   statement {
     actions = ["iam:CreateServiceLinkedRole"]
     resources = [
-      "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/aws-service-role/autoscaling.*",
-      "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/aws-service-role/spot.*"
+      "arn:aws:iam::$"$"${data.aws_caller_identity.current.account_id}:role/aws-service-role/autoscaling.*",
+      "arn:aws:iam::$"$"${data.aws_caller_identity.current.account_id}:role/aws-service-role/spot.*"
     ]
   }
 }
